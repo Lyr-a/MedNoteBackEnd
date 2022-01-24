@@ -11,7 +11,7 @@ if (isset($_POST['TRATAMENTO_TITLE']) && isset($_POST['TRATAMENTO_DESC'])  && is
 	$TRATAMENTO_TITLE = $_POST['TRATAMENTO_TITLE'];
 	$TRATAMENTO_DESC = $_POST['TRATAMENTO_DESC'];
 	$TRATAMENTO_DATA = $_POST['TRATAMENTO_DATA'];
-	$TRATAMENTO_HORA = $_POST['TRATAMENTO_HORA'];
+	
 
 
 
@@ -22,8 +22,8 @@ if (isset($_POST['TRATAMENTO_TITLE']) && isset($_POST['TRATAMENTO_DESC'])  && is
 //conectar ao banco de dados
 	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 	
-	$result = pg_query($con, "INSERT INTO Tratamento(TRATAMENTO_TITLE, TRATAMENTO_DESC, TRATAMENTO_DATA, TRATAMENTO_HORA)
-	VALUES('$TRATAMENTO_TITLE', '$TRATAMENTO_DESC','$TRATAMENTO_DATA','$TRATAMENTO_HORA')");
+	$result = pg_query($con, "INSERT INTO Tratamento(TRATAMENTO_TITLE, TRATAMENTO_DESC, TRATAMENTO_DATA,)
+	VALUES('$TRATAMENTO_TITLE', '$TRATAMENTO_DESC','$TRATAMENTO_DATA')");
 	
 	if ($result){
 	$response["success"] = 1;
