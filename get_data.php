@@ -4,7 +4,7 @@
 $response = array();
 
 // conecta ao BD
-$con = pg_connect(getenv("DATABASE_URL"));
+$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 
 $CPF = NULL;
 $SENHA = NULL;
