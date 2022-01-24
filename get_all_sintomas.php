@@ -6,7 +6,7 @@
 $response = array();
  
 
-//$con = pg_connect(getenv("DATABASE_URL"));
+$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
  
 // Realiza uma consulta ao BD e obtem todos os produtos.
 $result = pg_query($con, "SELECT *FROM Sintoma");
