@@ -18,7 +18,7 @@ if (isset($_POST['SINTOMA_TITLE']) && isset($_POST['SINTOMA_DESC']) && isset($_P
 	$SINTOMA_PHOTO = 'data:image/'.$imageFileType';base64,'.$image_base64;
 	
 	//conectar ao banco de dados
-	//$con = pg_connext();
+	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 	
 	$result = pg_query($con, "INSERT INTO Sintoma(SINTOMA_TITLE, SINTOMA_DESC, SINTOMA_DATA, SINTOMA_HORA, SINTOMA_PHOTO)
 	VALUES('$SINTOMA_TITLE', '$SINTOMA_DESC','$SINTOMA_DATA','$SINTOMA_HORA','$SINTOMA_PHOTO')");
