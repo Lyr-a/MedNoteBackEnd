@@ -11,7 +11,7 @@ if (isset($_GET["Num_tratamento"])) {
     $Num_tratamento = $_GET['Num_tratamento'];
 	
  
-    $result = pg_query($con, "SELECT *FROM Tratamento WHERE Num_tratamento = $Num_tratamento");
+    $result = pg_query($con, "SELECT * FROM Tratamento WHERE Num_tratamento = $Num_tratamento");
  
     if (!empty($result)) {
         if (pg_num_rows($result) > 0) {
@@ -24,9 +24,7 @@ if (isset($_GET["Num_tratamento"])) {
             $tratamento["TRATAMENTO_TITLE"] = $result["TRATAMENTO_TITLE"];
             $tratamento["TRATAMENTO_DESC"] = $result["TRATAMENTO_DESC"];
             $tratamento["TRATAMENTO_DATA"] = $result["TRATAMENTO_DATA"];
-			$tratamento["EXAME_PHOTO"] = $result["EXAME_PHOTO"];
-			$tratamento["RECEITA_PHOTO"] = $result["RECEITA_PHOTO"];
-            $tratamento["PRESCRICAO_PHOTO"] = $result["PRESCRICAO_PHOTO"];
+		
            
            
             
