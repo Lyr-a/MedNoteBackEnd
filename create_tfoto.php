@@ -15,7 +15,7 @@ if (isset($_POST['FOTO'])){
 
 
 //conectar ao banco de dados
-	//$con = pg_connext();
+	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 	
 	$result = pg_query($con, "INSERT INTO TFotos(FOTO) VALUES('$FOTO')");
 	
