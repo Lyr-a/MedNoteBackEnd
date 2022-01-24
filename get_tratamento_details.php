@@ -4,7 +4,7 @@
 // array que guarda a resposta da requisicao
 $response = array();
 
-//$con = pg_connect();
+$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 
 if (isset($_GET["Num_tratamento"])) {
 	
