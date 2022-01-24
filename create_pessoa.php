@@ -17,7 +17,7 @@ if (isset($_POST['CPF']) && isset($_POST['SENHA']) && isset($_POST['NOME']) && i
 	$NUM_EMER = $_POST['NUM_EMER'];
 	
 	//conectar ao banco de dados
-	//$con = pg_connext();
+	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 	
 	$usuario_existe = pg_query($con, "SELECT CPF FROM Pessoa WHERE CPF='$CPF'");
 	//ver se ja ha usuario com esse cpf
