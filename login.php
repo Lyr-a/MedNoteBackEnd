@@ -3,11 +3,6 @@
 //conectar ao bd
 $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 $stat = pg_connection_status($con);
-  if ($stat === PGSQL_CONNECTION_OK) {
-      echo 'Connection status ok';
-  } else {
-      echo 'Connection status bad';
-  } 
 //array para resposta json
 $response = array();
 $CPF = NULL;
