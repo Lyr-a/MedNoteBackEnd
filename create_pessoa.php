@@ -10,11 +10,11 @@ if (isset($_POST['CPF']) && isset($_POST['SENHA']) && isset($_POST['NOME']) && i
 
 	$CPF = trim($_POST['CPF']);
 	$SENHA = trim($_POST['SENHA']);
-	$NOME = $_POST['NOME'];
-	$GENERO = $_POST['GENERO'];
-	$TIPO_SANG = $_POST['TIPO_SANG'];
-	$DATA_NASC = $_POST['DATA_NASC'];
-	$NUM_EMER = $_POST['NUM_EMER'];
+	$NOME = trim($_POST['NOME']);
+	$GENERO = trim($_POST['GENERO']);
+	$TIPO_SANG = trim($_POST['TIPO_SANG']);
+	$DATA_NASC = trim($_POST['DATA_NASC']);
+	$NUM_EMER = trim($_POST['NUM_EMER']);
 	
 	//conectar ao banco de dados
 	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
