@@ -1,5 +1,5 @@
 <?php
- 
+/*
 // array for JSON response
 $response = array();
 
@@ -47,5 +47,5 @@ else {
 }
 
 pg_close($con);
-echo json_encode($response);
+echo json_encode($response);*/
 ?>
