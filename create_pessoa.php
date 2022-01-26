@@ -46,7 +46,8 @@ if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && i
 		
 	
 	
-	}	}
+		}
+	}
 }
 else {
 	$response["success"] = 0;
