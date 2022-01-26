@@ -54,6 +54,7 @@ if($isAuth) {
 				$sintoma["SINTOMA_TITLE"] = $result[" SINTOMA_TITLE"];
 				$sintoma["SINTOMA_DESC"] = $result["SINTOMA_DESC"];
 				$sintoma["SINTOMA_DATA"] = $result["SINTOMA_DATA"];
+				$sintoma["SINTOMA_HORA"] = $result["SINTOMA_HORA"];
 				$sintoma["SINTOMA_PHOTO"] = $result["SINTOMA_PHOTO"];
 			   
 				
