@@ -30,7 +30,7 @@ if(!is_null($CPF)){
 
 	if(pg_num_rows($query) > 0){
 		$row = pg_fetch_array($query);
-		if($SENHA == $row['SENHA']){
+		if($SENHA == $row['senha']){
 			$isAuth = true;
 		}
 	}
