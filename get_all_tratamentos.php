@@ -26,11 +26,11 @@ elseif(isset( $_SERVER['HTTP_AUTHORIZATION'])) {
 
 // Se a autenticação não foi enviada
 if(!is_null($CPF)){
-    $query = pg_query($con, "SELECT SENHA FROM Pessoa WHERE CPF='$CPF'");
+    $query = pg_query($con, "SELECT senha FROM Pessoa WHERE cpf='$CPF'");
 
 	if(pg_num_rows($query) > 0){
 		$row = pg_fetch_array($query);
-		if($SENHA == $row['SENHA']){
+		if($SENHA == $row['senha']){
 			$isAuth = true;
 		}
 	}
@@ -38,7 +38,7 @@ if(!is_null($CPF)){
 if($isAuth) {
  
 	// Realiza uma consulta ao BD e obtem todos os produtos.
-	$result = pg_query($con, "SELECT *FROM Tratamento");
+	$result = pg_query($con, "SELECT * FROM Tratamento");
 	 
 
 	if (pg_num_rows($result) > 0) {
@@ -48,8 +48,8 @@ if($isAuth) {
 		while ($row = pg_fetch_array($result)) {
 		 
 			$tratamentos = array();
-			$tratamentos["ID_TRATAMENTO"] = $row["ID_TRATAMENTO"];
-			$tratamentos["TRATAMENTO_TITLE"] = $row["TRATAMENTO_TITLE"];
+			$tratamentos["id_tratamento"] = $row["id_tratamento"];
+			$tratamentos["tratamento_title"] = $row["tratamento_title"];
 	 
 			// Adiciona o produto no array de produtos.
 			array_push($response["Tratamento"], $tratamentos);
