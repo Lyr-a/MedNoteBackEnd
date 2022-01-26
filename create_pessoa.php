@@ -34,10 +34,7 @@ if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && i
 			$response["success"] = 1;
 			$response["message"] = "Usuario criado com sucesso";
 			
-			pg_close($con);
-	
-			echo json_encode($response); 
-	
+			
 		}
 	
 		else{
@@ -56,6 +53,10 @@ else {
 	
 	
 }
+pg_close($con);
+	
+echo json_encode($response); 
+	
 
 ?>
 	
