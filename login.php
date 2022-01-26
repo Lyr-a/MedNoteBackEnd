@@ -26,11 +26,11 @@ if(is_null($CPF)) {
 }
 // Se houve envio dos dados
 else {
-    $query = pg_query($con, "SELECT SENHA FROM Pessoa WHERE CPF='$CPF'");
+    $query = pg_query($con, "SELECT senha FROM Pessoa WHERE cpf='$CPF'");
 
 	if(pg_num_rows($query) > 0){
 		$row = pg_fetch_array($query);
-		if($SENHA == $row['SENHA']){
+		if($SENHA == $row['senha']){
 			$response["success"] = 1;
 		}
 		else {
