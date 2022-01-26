@@ -38,15 +38,15 @@ if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && i
 	
 			echo json_encode($response); 
 	
+		}
+	
+		else{
+		$response["success"] = 0;
+		$response["message"] = "Erro ao criar usuario no bd".pg_last_error($con);	
+		
 	
 	
-	else{
-	$response["success"] = 0;
-	$response["message"] = "Erro ao criar usuario no bd".pg_last_error($con);
-	
-	
-	
-	}}
+	}	}
 }
 else {
 	$response["success"] = 0;
