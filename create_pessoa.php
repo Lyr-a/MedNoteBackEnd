@@ -34,17 +34,13 @@ if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && i
 			$response["success"] = 1;
 			$response["message"] = "Usuario criado com sucesso";
 	
-	pg_close($con);
 	
-	echo json_encode($response); }
 	
 	else{
 	$response["success"] = 0;
 	$response["message"] = "Erro ao criar usuario no bd".pg_last_error($con);
 	
-	pg_close($con);
 	
-	echo json_encode($response);
 	
 	}}
 }
@@ -52,8 +48,11 @@ else {
 	$response["success"] = 0;
 	$response["message"] = "Campo(s) requerido(s) nao preenchido";
 	
-	echo json_encode($response);
+	
 	
 }
+pg_close($con);
+	
+echo json_encode($response); 
 ?>
 	
