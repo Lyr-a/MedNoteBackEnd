@@ -13,7 +13,7 @@ if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && i
 	$NOME = trim($_POST['nome']);
 	$GENERO = trim($_POST['genero']);
 	$TIPO_SANG = trim($_POST['tipo_sang']);
-	$DATA_NASC = trim($_POST['data_nasc']);
+	$DATA_NASC = $_POST['data_nasc'];
 	$NUM_EMER = trim($_POST['num_emer']);
 	
 	//conectar ao banco de dados
