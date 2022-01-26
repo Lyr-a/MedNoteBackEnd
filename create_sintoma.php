@@ -5,14 +5,13 @@
 $response = array();
 
 //conferir os campos requisitados
-if (isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_POST['sintoma_data']) && isset($_POST['sintoma_hora'])&& isset($_FILES['sintoma_photo'])){
+if (isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_POST['sintoma_data'])&& isset($_FILES['sintoma_photo'])){
 
 	
 	
 	$SINTOMA_TITLE = $_POST['sintoma_title'];
 	$SINTOMA_DESC = $_POST['sintoma_desc'];
 	$SINTOMA_DATA = $_POST['sintoma_data'];
-	$SINTOMA_HORA = $_POST['sintoma_hora'];
 	$imageFileType = strtolower(pathinfo(basename($_FILES["sintoma_photo"]["name"]), PATHINFO_EXTENSION));
 	$image_base64 = base64_encode(file_get_contents($_FILES['sintoma_photo']['tmp_name']));
 	$SINTOMA_PHOTO = 'data:image/'.$imageFileType';base64,'.$image_base64;
@@ -20,7 +19,7 @@ if (isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_P
 	//conectar ao banco de dados
 	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 	
-	$result = pg_query($con, "INSERT INTO Sintoma(SINTOMA_TITLE, SINTOMA_DESC, SINTOMA_DATA, SINTOMA_HORA, SINTOMA_PHOTO)
+	$result = pg_query($con, "INSERT INTO Sintoma(sintoma_title, sintoma_desc, sintoma_data, sintoma_photo)
 	VALUES('$SINTOMA_TITLE', '$SINTOMA_DESC','$SINTOMA_DATA','$SINTOMA_HORA','$SINTOMA_PHOTO')");
 	
 	if ($result){
