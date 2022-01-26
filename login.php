@@ -1,7 +1,7 @@
 <?php
 
 //conectar ao bd
-$con = pg_connect(getenv("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy"));
+$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 
 //array para resposta json
 $response = array();
