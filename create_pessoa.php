@@ -5,21 +5,21 @@
 $response = array();
 
 //conferir os campos requisitados
-if (isset($_POST['CPF']) && isset($_POST['SENHA']) && isset($_POST['NOME']) && isset($_POST['GENERO']) && isset($_POST['TIPO_SANG']) && isset($_POST['NUM_EMER'])){
+if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && isset($_POST['genero']) && isset($_POST['tipo_sang']) && isset($_POST['num_emer'])){
 
 
-	$CPF = trim($_POST['CPF']);
-	$SENHA = trim($_POST['SENHA']);
-	$NOME = trim($_POST['NOME']);
-	$GENERO = trim($_POST['GENERO']);
-	$TIPO_SANG = trim($_POST['TIPO_SANG']);
-	$DATA_NASC = trim($_POST['DATA_NASC']);
-	$NUM_EMER = trim($_POST['NUM_EMER']);
+	$CPF = trim($_POST['cpf']);
+	$SENHA = trim($_POST['senha']);
+	$NOME = trim($_POST['nome']);
+	$GENERO = trim($_POST['genero']);
+	$TIPO_SANG = trim($_POST['tipo_sang']);
+	$DATA_NASC = trim($_POST['data_nasc']);
+	$NUM_EMER = trim($_POST['num_emer']);
 	
 	//conectar ao banco de dados
 	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 	
-	$usuario_existe = pg_query($con, "SELECT CPF FROM Pessoa WHERE CPF='$CPF'");
+	$usuario_existe = pg_query($con, "SELECT cpf FROM Pessoa WHERE cpf='$CPF'");
 	//ver se ja ha usuario com esse cpf
 	if (pg_num_rows($usuario_existe) > 0){
 		$response["success"] = 0;
@@ -27,7 +27,7 @@ if (isset($_POST['CPF']) && isset($_POST['SENHA']) && isset($_POST['NOME']) && i
 	}
 	
 	else{	
-		$result = pg_query($con, "INSERT INTO Pessoa(CPF, SENHA, NOME, GENERO, TIPO_SANG, NUM_EMER)
+		$result = pg_query($con, "INSERT INTO Pessoa(cpf, senha, nome, genero, tipo_sang, num_emer)
 		VALUES('$CPF', '$SENHA','$NOME','$GENERO', '$TIPO_SANG','$NUM_EMER')");
 	
 		if ($result){
