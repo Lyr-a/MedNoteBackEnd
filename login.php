@@ -2,7 +2,7 @@
 
 //conectar ao bd
 $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
-$stat = pg_connection_status($con);
+
 //array para resposta json
 $response = array();
 $CPF = NULL;
@@ -36,13 +36,13 @@ else {
 		else {
 			// senha ou usuario nao confere
 			$response["success"] = 0;
-			$response["error"] = "usuario ou senha não confere 1";
+			$response["error"] = "usuario ou senha não confere";
 		}
 	}
 	else {
 		// senha ou usuario nao confere
 		$response["success"] = 0;
-		$response["error"] = "usuario ou senha não confere";
+		$response["error"] = "usuario ou senha não confere 2";
 	}
 }
 
