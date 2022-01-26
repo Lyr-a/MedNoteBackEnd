@@ -38,7 +38,7 @@ if(!is_null($CPF)){
 if($isAuth) {
  
 	// Realiza uma consulta ao BD e obtem todos os produtos.
-	$result = pg_query($con, "SELECT * FROM Tratamento");
+	$result = pg_query($con, "SELECT * FROM Tratamento WHERE cpf='$CPF'");
 	 
 
 	if (pg_num_rows($result) > 0) {
@@ -69,6 +69,6 @@ if($isAuth) {
 }
 pg_close($con);
 	 
-		// Converte a resposta para o formato JSON.
+// Converte a resposta para o formato JSON.
 echo json_encode($response);
 ?>
