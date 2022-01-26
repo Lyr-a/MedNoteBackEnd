@@ -5,16 +5,16 @@
 $response = array();
 
 //conferir os campos requisitados
-if (isset($_POST['SINTOMA_TITLE']) && isset($_POST['SINTOMA_DESC']) && isset($_POST['SINTOMA_DATA']) && isset($_POST['SINTOMA_HORA'])&& isset($_FILES['SINTOMA_PHOTO'])){
+if (isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_POST['sintoma_data']) && isset($_POST['sintoma_hora'])&& isset($_FILES['sintoma_photo'])){
 
 	
 	
-	$SINTOMA_TITLE = $_POST['SINTOMA_TITLE'];
-	$SINTOMA_DESC = $_POST['SINTOMA_DESC'];
-	$SINTOMA_DATA = $_POST['SINTOMA_DATA'];
-	$SINTOMA_HORA = $_POST['SINTOMA_HORA'];
-	$imageFileType = strtolower(pathinfo(basename($_FILES["SINTOMA_PHOTO"]["name"]), PATHINFO_EXTENSION));
-	$image_base64 = base64_encode(file_get_contents($_FILES['SINTOMA_PHOTO']['tmp_name']));
+	$SINTOMA_TITLE = $_POST['sintoma_title'];
+	$SINTOMA_DESC = $_POST['sintoma_desc'];
+	$SINTOMA_DATA = $_POST['sintoma_data'];
+	$SINTOMA_HORA = $_POST['sintoma_hora'];
+	$imageFileType = strtolower(pathinfo(basename($_FILES["sintoma_photo"]["name"]), PATHINFO_EXTENSION));
+	$image_base64 = base64_encode(file_get_contents($_FILES['sintoma_photo']['tmp_name']));
 	$SINTOMA_PHOTO = 'data:image/'.$imageFileType';base64,'.$image_base64;
 	
 	//conectar ao banco de dados
