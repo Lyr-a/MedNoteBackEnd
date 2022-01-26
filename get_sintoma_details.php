@@ -69,8 +69,7 @@ if($isAuth) {
 				
 				
 	 
-				// Converte a resposta para o formato JSON.
-				echo json_encode($response);
+				
 			} else {
 				// Caso o produto nao exista no BD, o cliente 
 				// recebe a chave "success" com valor 0. A chave "message" indica o 
