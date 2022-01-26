@@ -5,7 +5,7 @@
 $response = array();
 
 //conferir os campos requisitados
-if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && isset($_POST['genero']) && isset($_POST['tipo_sang'])isset($_POST['data_nasc']) && isset($_POST['num_emer'])){
+if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && isset($_POST['genero']) && isset($_POST['tipo_sang']) && isset($_POST['data_nasc']) && isset($_POST['num_emer'])){
 
 
 	$CPF = trim($_POST['cpf']);
