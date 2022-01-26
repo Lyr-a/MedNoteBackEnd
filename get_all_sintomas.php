@@ -26,7 +26,7 @@ elseif(isset( $_SERVER['HTTP_AUTHORIZATION'])) {
 
 // Se a autenticação não foi enviada
 if(!is_null($CPF)){
-    $query = pg_query($con, "SELECT SENHA FROM Pessoa WHERE CPF='$CPF'");
+    $query = pg_query($con, "SELECT senha FROM Pessoa WHERE cpf='$CPF'");
 
 	if(pg_num_rows($query) > 0){
 		$row = pg_fetch_array($query);
@@ -37,7 +37,7 @@ if(!is_null($CPF)){
 }
 if($isAuth) {
 // Realiza uma consulta ao BD e obtem todos os produtos.
-	$result = pg_query($con, "SELECT * FROM Sintoma WHERE CPF='$CPF'");
+	$result = pg_query($con, "SELECT * FROM Sintoma WHERE cpf='$CPF'");
  
 
 	if (pg_num_rows($result) > 0) {
@@ -47,8 +47,8 @@ if($isAuth) {
 		while ($row = pg_fetch_array($result)) {
 		 
 			$sintomas = array();
-			$sintomas["ID_SINTOMA"] = $row["ID_SINTOMA"];
-			$sintomas["SINTOMA_TITLE"] = $row["SINTOMA_TITLE"];
+			$sintomas["id_sintoma"] = $row["id_sintoma"];
+			$sintomas["sintoma_title"] = $row["sintoma_title"];
 	 
 			// Adiciona o produto no array de produtos.
 			array_push($response["Sintoma"], $sintomas);
