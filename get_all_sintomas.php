@@ -53,6 +53,9 @@ if($isAuth) {
 			$sintomas = array();
 			$sintomas["id_sintoma"] = $row["id_sintoma"];
 			$sintomas["sintoma_title"] = $row["sintoma_title"];
+			$sintomas["sintoma_desc"] = $row["sintoma_desc"];
+			$sintomas["sintoma_data"] = $row["sintoma_data"];
+			$sintomas["sintoma_hora"] = $row["sintoma_hora"];
 	 
 			// Adiciona o produto no array de sintomas.
 			array_push($response["Sintoma"], $sintomas);
