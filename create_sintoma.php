@@ -4,11 +4,6 @@
 
 $response = array();
 
-	$CPF = "123";
-	$SINTOMA_TITLE = "AAAAAAAAAAAAAAAAAA";
-	$SINTOMA_DESC = "AAAAAAAAAAAAAAAAAA";
-	$SINTOMA_DATA = "AAAAAAAAAAAAAAAAAA";
-	$SINTOMA_HORA = "AAAAAAAAAAAAAAAAAA";
 //conferir os campos requisitados
 if (isset($_POST['cpf']) && (isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_POST['sintoma_data']) && isset($_POST['sintoma_hora'])){
 
