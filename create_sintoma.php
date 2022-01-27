@@ -30,7 +30,7 @@ if (isset($_POST['cpf']) && (isset($_POST['sintoma_title']) && isset($_POST['sin
 	}
 	else{
 	$response["success"] = 0;
-	$response["message"] = "Erro ao criar sintoma no bd";
+	$response["message"] = "Erro ao criar usuario no bd".pg_last_error($con);
 	
 
 	
