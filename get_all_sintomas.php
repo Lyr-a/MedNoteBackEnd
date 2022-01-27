@@ -4,7 +4,6 @@
  
 // array que guarda a resposta da requisicao
 $response = array();
-$
 	
 $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 
@@ -58,14 +57,14 @@ if($isAuth) {
 			//$response["sintoma"] =  $row["sintoma_title"];
 		}
 	   
-		$response["success"] = 1;
+		//$response["success"] = 1;
 		
 
 		
 	} else {
 		
-		$response["success"] = 0;
-		$response["message"] = "Nao ha sintomas";
+		//$response["success"] = 0;
+		//$response["message"] = "Nao ha sintomas";
 		
 		// Fecha a conexao com o BD
 		
