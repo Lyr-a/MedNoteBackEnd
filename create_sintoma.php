@@ -1,6 +1,6 @@
 <?php 
 
-//sintomas 
+//cria sintomas 
 
 $response = array();
 
