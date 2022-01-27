@@ -4,7 +4,8 @@
  
 // array que guarda a resposta da requisicao
 $response = array();
-
+$
+	
 $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 
 
@@ -43,18 +44,18 @@ if($isAuth) {
 	   
 		//$response["Sintoma"] = array();
 	
+		$x = 2;
 		
 		while ($row = pg_fetch_array($result)) {
 		 
-			/*
 			$sintomas = array();
 			$sintomas["id_sintoma"] = $row["id_sintoma"];
 			$sintomas["sintoma_title"] = $row["sintoma_title"];
 	 
 			// Adiciona o produto no array de sintomas.
-			array_push($response["Sintoma"], $sintomas);
-			*/
-			$response["sintoma"] =  $row["sintoma_title"];
+			array_push($response[$x], $sintomas);
+			$x = $x + 1;
+			//$response["sintoma"] =  $row["sintoma_title"];
 		}
 	   
 		$response["success"] = 1;
