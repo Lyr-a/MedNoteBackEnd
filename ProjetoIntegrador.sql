@@ -1,4 +1,4 @@
-
+//replica do modelo fisico do banco de dados usado
 CREATE TABLE Pessoa (
 	 CPF VARCHAR(50) PRIMARY KEY,
 	 SENHA VARCHAR(50) NOT NULL,
