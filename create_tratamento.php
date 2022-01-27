@@ -1,7 +1,9 @@
 <?php 
 
-// criar tratamento
+//conectar ao banco de dados
+$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
 
+// criar tratamento
 $response = array();
 
 //conferir os campos requisitados
