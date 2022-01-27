@@ -23,8 +23,7 @@ if (isset($_POST['cpf']) && isset($_POST['tratamento_title']) && isset($_POST['t
 
 
 
-//conectar ao banco de dados
-	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
+
 	
 	$result = pg_query($con, "INSERT INTO Tratamento(cpf, tratamento_title, tratamento_desc, tratamento_data, tratamento_hora )
 	VALUES('$CPF', '$TRATAMENTO_TITLE', '$TRATAMENTO_DESC','$TRATAMENTO_DATA', '$TRATAMENTO_HORA')");
