@@ -11,6 +11,9 @@ $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.d
 $CPF = NULL;
 $SENHA = NULL;
 
+$CPF = "123";
+$SENHA = "adm";
+
 $isAuth = false;
 
 // Método para mod_php (Apache)
@@ -41,9 +44,9 @@ if($isAuth) {
 
 	if (pg_num_rows($result) > 0) {
 	   
-		//$response["Sintoma"] = array();
+		$response["Sintoma"] = array();
 	
-		$x = 0;
+		//$x = 0;
 		
 		while ($row = pg_fetch_array($result)) {
 		 
@@ -52,19 +55,19 @@ if($isAuth) {
 			$sintomas["sintoma_title"] = $row["sintoma_title"];
 	 
 			// Adiciona o produto no array de sintomas.
-			array_push($response[$x], $sintomas);
-			$x = $x + 1;
+			array_push($response["Sintoma"], $sintomas);
+			//$x = $x + 1;
 			//$response["sintoma"] =  $row["sintoma_title"];
 		}
 	   
-		//$response["success"] = 1;
+		$response["success"] = 1;
 		
 
 		
 	} else {
 		
-		//$response["success"] = 0;
-		//$response["message"] = "Nao ha sintomas";
+		$response["success"] = 0;
+		$response["message"] = "Nao ha sintomas";
 		
 		// Fecha a conexao com o BD
 		
