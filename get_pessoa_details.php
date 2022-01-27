@@ -37,26 +37,26 @@ if(!is_null($CPF)){
 }
 if($isAuth) {
 // Realiza uma consulta ao BD e obtem todos os produtos.
-	$result = pg_query($con, "SELECT * FROM Pessoa WHERE cpf='$CPF'");
+	$result = pg_query($con, "SELECT (cpf, nome, genero, tipo_sang, num_emer ) FROM Pessoa WHERE cpf='$CPF'");
  
 
 	if (pg_num_rows($result) > 0) {
 	   
-		$response["Sintoma"] = array();
+		$response["Pessoa"] = array();
 	
 		//$x = 0;
 		
 		while ($row = pg_fetch_array($result)) {
 		 
-			$sintomas = array();
-			$sintomas["id_sintoma"] = $row["id_sintoma"];
-			$sintomas["sintoma_title"] = $row["sintoma_title"];
-			$sintomas["sintoma_desc"] = $row["sintoma_desc"];
-			$sintomas["sintoma_data"] = $row["sintoma_data"];
-			$sintomas["sintoma_hora"] = $row["sintoma_hora"];
+			$pessoas = array();
+			$pessoas["cpf"] = $row["cpf"];
+			$pessoas["nome"] = $row["nome"];
+			$pessoas["genero"] = $row["genero"];
+			$pessoas["tipo_sang"] = $row["tipo_sang"];
+			$pessoas["num_emer"] = $row["num_emer"];
 	 
 			// Adiciona o produto no array de sintomas.
-			array_push($response["Sintoma"], $sintomas);
+			array_push($response["Pessoa"], $pessoa);
 			//$x = $x + 1;
 			//$response["sintoma"] =  $row["sintoma_title"];
 		}
