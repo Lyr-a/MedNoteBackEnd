@@ -43,7 +43,7 @@ if($isAuth) {
 	   
 		//$response["Sintoma"] = array();
 	
-		$x = 2;
+		$x = 0;
 		
 		while ($row = pg_fetch_array($result)) {
 		 
