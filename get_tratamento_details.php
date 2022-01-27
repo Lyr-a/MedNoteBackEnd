@@ -1,5 +1,5 @@
 <?php
- 
+/*
  
 // array que guarda a resposta da requisicao
 $response = array();
@@ -104,4 +104,5 @@ pg_close($con);
 	 
 // Converte a resposta para o formato JSON.
 echo json_encode($response);
+*/
 ?>
