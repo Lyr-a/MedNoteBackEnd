@@ -36,7 +36,7 @@ if(!is_null($CPF)){
 	}
 }
 if($isAuth) {
-// Realiza uma consulta ao BD e obtem todos os produtos.
+// Realiza uma consulta ao BD e obtem todos os sintomas.
 	$result = pg_query($con, "SELECT * FROM Sintoma WHERE cpf='$CPF'");
  
 
@@ -57,8 +57,7 @@ if($isAuth) {
 	 
 			// Adiciona o produto no array de sintomas.
 			array_push($response["Sintoma"], $sintomas);
-			//$x = $x + 1;
-			//$response["sintoma"] =  $row["sintoma_title"];
+		
 		}
 	   
 		$response["success"] = 1;
