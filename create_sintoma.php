@@ -17,7 +17,7 @@ if (isset($_POST['cpf']) && isset($_POST['sintoma_title']) && isset($_POST['sint
 	$SINTOMA_HORA = $_POST['sintoma_hora'];
 	
 	
-	$imageFileType = strtolower(pathinfo(basename($_FILES["sintoma_photo"]["name"]), PATHINFO_EXTENSION));
+	$imageFileType = strtolower(pathinfo(basename($_FILES['sintoma_photo']['name']), PATHINFO_EXTENSION));
 	$image_base64 = base64_encode(file_get_contents($_FILES['sintoma_photo']['tmp_name']));
 	$SINTOMA_PHOTO = 'data:image/'.$imageFileType';base64,'.$image_base64;
 	
