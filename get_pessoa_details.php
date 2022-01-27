@@ -56,7 +56,7 @@ if($isAuth) {
 			$pessoas["num_emer"] = $row["num_emer"];
 	 
 			// Adiciona o produto no array de sintomas.
-			array_push($response["Pessoa"], $pessoa);
+			array_push($response["Pessoa"], $pessoas);
 			//$x = $x + 1;
 			//$response["sintoma"] =  $row["sintoma_title"];
 		}
