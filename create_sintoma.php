@@ -43,10 +43,10 @@ else {
 	$response["message"] = "Campo requerido nao preenchido";
 	
 
+	pg_close($con);
+	echo json_encode($response);
 	
 }
-pg_close($con);
-echo json_encode($response);
 ?>
 	
 	
