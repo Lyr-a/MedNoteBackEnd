@@ -13,9 +13,11 @@ if (isset($_POST['cpf']) && (isset($_POST['sintoma_title']) && isset($_POST['sin
 	$SINTOMA_DESC = $_POST['sintoma_desc'];
 	$SINTOMA_DATA = $_POST['sintoma_data'];
 	$SINTOMA_HORA = $_POST['sintoma_hora'];
+	/*
 	$imageFileType = strtolower(pathinfo(basename($_FILES["sintoma_photo"]["name"]), PATHINFO_EXTENSION));
 	$image_base64 = base64_encode(file_get_contents($_FILES['sintoma_photo']['tmp_name']));
 	$SINTOMA_PHOTO = 'data:image/'.$imageFileType';base64,'.$image_base64;
+	*/
 	
 	//conectar ao banco de dados
 	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");
