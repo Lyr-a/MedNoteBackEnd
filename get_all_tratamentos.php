@@ -12,9 +12,6 @@ $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.d
 $CPF = NULL;
 $SENHA = NULL;
 
-$CPF = "1234";
-$SENHA = "aaa";
-
 $isAuth = false;
 
 // Método para mod_php (Apache)
