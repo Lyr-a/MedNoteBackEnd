@@ -37,7 +37,7 @@ if(!is_null($CPF)){
 }
 if($isAuth) {
 // Realiza uma consulta ao BD e obtem todos os produtos.
-	$result = pg_query($con, "SELECT (cpf, nome, genero, tipo_sang, num_emer ) FROM Pessoa WHERE cpf='$CPF'");
+	$result = pg_query($con, "SELECT (cpf, nome, genero, tipo_sang, data_nasc, num_emer ) FROM Pessoa WHERE cpf='$CPF'");
  
 
 	if (pg_num_rows($result) > 0) {
@@ -53,6 +53,7 @@ if($isAuth) {
 			$pessoas["nome"] = $row["nome"];
 			$pessoas["genero"] = $row["genero"];
 			$pessoas["tipo_sang"] = $row["tipo_sang"];
+			$pessoas["data_nasc"] = $row["data_nasc"];
 			$pessoas["num_emer"] = $row["num_emer"];
 	 
 			// Adiciona o produto no array de sintomas.
