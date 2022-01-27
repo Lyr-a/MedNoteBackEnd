@@ -37,7 +37,7 @@ if(!is_null($CPF)){
 }
 if($isAuth) {
 // Realiza uma consulta ao BD e obtem todos os dados de uma determinada pessoa.
-	$result = pg_query($con, "SELECT (cpf, nome, genero, tipo_sang, data_nasc, num_emer ) FROM Pessoa WHERE cpf='$CPF'");
+	$result = pg_query($con, "SELECT * FROM Pessoa WHERE cpf='$CPF'");
  
 
 	if (pg_num_rows($result) > 0) {
