@@ -4,7 +4,8 @@
 
 $response = array();
 
-
+//conectar ao banco de dados
+$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");	
 
 //conferir os campos requisitados
 if (isset($_POST['cpf']) && isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_POST['sintoma_data']) && isset($_POST['sintoma_hora']) && isset($_FILES['sintoma_photo'])){
@@ -22,8 +23,7 @@ if (isset($_POST['cpf']) && isset($_POST['sintoma_title']) && isset($_POST['sint
 	$SINTOMA_PHOTO = 'data:image/'.$imageFileType';base64,'.$image_base64;
 	
 	
-	//conectar ao banco de dados
-	$con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.db.elephantsql.com/rfvpbzdy");	
+
 	
 	$result = pg_query($con, "INSERT INTO Sintoma(cpf, sintoma_title, sintoma_desc, sintoma_data, sintoma_hora, sintoma_photo)
 	VALUES('$CPF', '$SINTOMA_TITLE', '$SINTOMA_DESC','$SINTOMA_DATA','$SINTOMA_HORA', '$SINTOMA_PHOTO')");
