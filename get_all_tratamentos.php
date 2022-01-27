@@ -50,7 +50,11 @@ if($isAuth) {
 			$tratamentos = array();
 			$tratamentos["id_tratamento"] = $row["id_tratamento"];
 			$tratamentos["tratamento_title"] = $row["tratamento_title"];
-	 
+			$tratamentos["tratamento_desc"] = $row["tratamento_desc"];
+			$tratamentos["tratamento_data"] = $row["tratamento_data"];
+			$tratamentos["tratamento_hora"] = $row["tratamento_hora"];
+			
+			
 			// Adiciona o produto no array de produtos.
 			array_push($response["Tratamento"], $tratamentos);
 		}
