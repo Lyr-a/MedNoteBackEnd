@@ -7,7 +7,7 @@ $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.d
 $response = array();
 
 //conferir os campos requisitados
-if (isset($_POST['cpf']) && isset($_POST['tratamento_title']) && isset($_POST['tratamento_desc'])  && isset($_POST['tratamento_data']) && isset($_FILES['tratamento_hora'])){
+if (isset($_POST['cpf']) && isset($_POST['tratamento_title']) && isset($_POST['tratamento_desc']) && isset($_POST['tratamento_data']) && isset($_POST['tratamento_hora'])){
 
 	
    	$CPF = trim($_POST['cpf']);
