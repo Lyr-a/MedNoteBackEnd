@@ -37,7 +37,7 @@ if(!is_null($CPF)){
 }
 if($isAuth) {
  
-	// Realiza uma consulta ao BD e obtem todos os produtos.
+	// Realiza uma consulta ao BD e obtem todos os tratamentos.
 	$result = pg_query($con, "SELECT * FROM Tratamento WHERE cpf='$CPF'");
 	 
 
@@ -55,7 +55,7 @@ if($isAuth) {
 			$tratamentos["tratamento_hora"] = $row["tratamento_hora"];
 			
 			
-			// Adiciona o produto no array de produtos.
+			// Adiciona o produto no array de tratamentos.
 			array_push($response["Tratamento"], $tratamentos);
 		}
 	   
