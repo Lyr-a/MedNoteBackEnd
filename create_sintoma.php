@@ -5,10 +5,10 @@
 $response = array();
 
 //conferir os campos requisitados
-if (isset($_POST['sintoma_title']) && (isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_POST['sintoma_data']) && isset($_POST['sintoma_hora'])){
+if (isset($_POST['cpf']) && (isset($_POST['sintoma_title']) && isset($_POST['sintoma_desc']) && isset($_POST['sintoma_data']) && isset($_POST['sintoma_hora'])){
 
 	
-	$CPF = trim($_POST['sintoma_title']);
+	$CPF = trim($_POST['cpf']);
 	$SINTOMA_TITLE = $_POST['sintoma_title'];
 	$SINTOMA_DESC = $_POST['sintoma_desc'];
 	$SINTOMA_DATA = $_POST['sintoma_data'];
