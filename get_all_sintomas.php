@@ -70,7 +70,7 @@ if($isAuth) {
 		$response["success"] = 0;
 		$response["message"] = "Nao ha sintomas";
 		
-		// Fecha a conexao com o BD
+		
 		
 	}
 }
