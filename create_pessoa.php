@@ -1,6 +1,6 @@
 <?php 
 
-//usuarios 
+//criar usuarios 
 
 $response = array();
 
