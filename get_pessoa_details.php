@@ -36,7 +36,7 @@ if(!is_null($CPF)){
 	}
 }
 if($isAuth) {
-// Realiza uma consulta ao BD e obtem todos os produtos.
+// Realiza uma consulta ao BD e obtem todos os dados de uma determinada pessoa.
 	$result = pg_query($con, "SELECT (cpf, nome, genero, tipo_sang, data_nasc, num_emer ) FROM Pessoa WHERE cpf='$CPF'");
  
 
@@ -56,10 +56,9 @@ if($isAuth) {
 			$pessoas["data_nasc"] = $row["data_nasc"];
 			$pessoas["num_emer"] = $row["num_emer"];
 	 
-			// Adiciona o produto no array de sintomas.
+			// Adiciona os dados no array de pessoas.
 			array_push($response["Pessoa"], $pessoas);
-			//$x = $x + 1;
-			//$response["sintoma"] =  $row["sintoma_title"];
+			
 		}
 	   
 		$response["success"] = 1;
