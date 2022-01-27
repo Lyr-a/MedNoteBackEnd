@@ -28,7 +28,7 @@ if (isset($_POST['cpf']) && isset($_POST['senha']) && isset($_POST['nome']) && i
 	
 	else{	
 		$result = pg_query($con, "INSERT INTO Pessoa(cpf, senha, nome, genero, tipo_sang, data_nasc, num_emer)
-		VALUES('$CPF', '$SENHA','$NOME','$GENERO', '$TIPO_SANG', $DATA_NASC, '$NUM_EMER')");
+		VALUES('$CPF', '$SENHA','$NOME','$GENERO', '$TIPO_SANG', '$DATA_NASC', '$NUM_EMER')");
 	
 		if ($result){
 			$response["success"] = 1;
