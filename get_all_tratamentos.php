@@ -12,8 +12,8 @@ $con = pg_connect("postgres://rfvpbzdy:Viurc8sZ2VdqcnPCsFCOd9j9a-qFAOMG@chunee.d
 $CPF = NULL;
 $SENHA = NULL;
 
-$CPF = "123456789";
-$SENHA = "VASCO";
+$CPF = "1234";
+$SENHA = "aaa";
 
 $isAuth = false;
 
