@@ -54,7 +54,7 @@ if($isAuth) {
 			$sintomas["sintoma_desc"] = $row["sintoma_desc"];
 			$sintomas["sintoma_data"] = $row["sintoma_data"];
 			$sintomas["sintoma_hora"] = $row["sintoma_hora"];
-			$sintomas["sintoma_photo"] = $row["sintoma_photo"];
+		
 	 
 			// Adiciona o sintoma no array de sintomas.
 			array_push($response["Sintoma"], $sintomas);
