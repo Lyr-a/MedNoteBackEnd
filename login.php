@@ -42,7 +42,7 @@ else {
 	else {
 		// senha ou usuario nao confere
 		$response["success"] = 0;
-		$response["error"] = "usuario ou senha não confere 2";
+		$response["error"] = "usuario ou senha não conferem";
 	}
 }
 
